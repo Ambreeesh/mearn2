@@ -1,2 +1,9 @@
-console.log("Hi Ambreesh!!!")
-console.log("I am working with the Mern2");
+const http = require("http");
+const PORT = 8082
+const server = http.createServer(() => {
+   console.log(`Request incomming...`);
+});
+
+server.listen(PORT, ()=>{
+    console.log(`Server running on ${PORT}`);
+});
