@@ -1,7 +1,7 @@
 const express = require("express");
 // const currenciesJson = require("./currencies.json");
 const axios = require("axios");
-const {getCurrencies, getCurrenciesBySymbol} = require("/controllers/currencies.controllers.js");
+const {getCurrencies, getCurrenciesBySymbol} = require ("./controllers/currencies.controllers.js");
 const app = express();
 const PORT = 8082;
 
