@@ -1,14 +1,6 @@
-const express = require("express");
-// const currenciesJson = require("./currencies.json");
-const axios = require("axios");
-const app = express();
-const PORT = 8082;
+const axios = require(axios);
 
-app.get("/", (req, res)=>{
-  res.send("<h1>Currency Database</h1>");
-});
-
-app.get("/currencies", async (req, res)=>{
+const getCurrencies = async (req, res)=>{
 
   try {
     const response = (await axios.get("https://api.coinbase.com/v2/currencies")).data
@@ -20,9 +12,10 @@ app.get("/currencies", async (req, res)=>{
   } catch (error) {
     res.status(500).send({message:"Something went wrong..."});
   }
-});
+};
 
-app.get("/currencies/:symbol", async (req, res)=>{
+
+const getCurrenciesBySymbol = async (req, res)=>{
   try {
       const response = (await axios.get("https://api.coinbase.com/v2/currencies")).data;
       const reqCurrency = response.data.find((currency)=> currency.id === req.params.symbol.toUpperCase())
@@ -31,8 +24,6 @@ app.get("/currencies/:symbol", async (req, res)=>{
   } catch (error) {
        res.status(500).send({message:"Something went wrong..."});
   }
-});
+}
 
-app.listen(PORT,()=>{
-  console.log(`Server is runing on ${PORT}`);
-})
+module.exports = {getCurrencies, getCurrenciesBySymbol};
