@@ -3,7 +3,8 @@ const express = require("express");
 // const axios = require("axios");
 const currencyRoutes = require("./routes/currencies.routes");
 const userRoutes = require("./routes/users.routes");
-
+const dotEnv = require("dotenv");
+dotEnv.config();
 const app = express();
 const PORT = 8082;
 
