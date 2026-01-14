@@ -1,6 +1,6 @@
 import express from "express";
-import {getCurrencies, getCurrenciesBySymbol} from "./controllers/currencies.controllers.js";
-import { getAllUsers, getUsersByUuid, getUserByGenderOrAge} from "./controllers/users.controllers.js";
+import {getCurrencies, getCurrenciesBySymbol} from "./controllers/currencies.controller.js";
+import { getAllUsers, getUsersByUuid, getUserByGenderOrAge} from "./controllers/users.controller.js";
 const app = express();
 const PORT = 8082;
 
