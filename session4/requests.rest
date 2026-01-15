@@ -1,0 +1,19 @@
+Get http://localhost:8082/currencies
+
+###
+Get http://localhost:8082/currencies/inr
+
+###
+Get http://localhost:8082/currencies?min_value=0.1
+
+###
+Get http://localhost:8082/users
+
+###
+Get http://localhost:8082/users/55322486-4169-4554-98ec-5882450c637e
+Authorization: PingToServer
+###
+Get http://localhost:8082/users/search?age=49
+Authorization: PingToServer
+
+
