@@ -18,4 +18,12 @@ Authorization: PingToServer
 
 ###
 POST http://localhost:8082/blogs
+Content-Type: application/json
+
+{
+    "title": "new blog",
+    "authors": ["John doe", "Jane doe"],
+    "content": "hidden gems of The Lake",
+    "publishedAt": null
+}
 

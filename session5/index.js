@@ -13,6 +13,7 @@ const app = express();
 const PORT = 8082;
 connectDB();
 // app.use(verifyAuth);
+app.use(express.json());
 app.use("/currencies", currencyRoutes);
 app.use("/users",userRoutes);
 app.use("/blogs", blogRoutes);
